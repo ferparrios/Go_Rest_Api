@@ -12,8 +12,8 @@ import (
 func main(){
 	r := mux.NewRouter()
 
-	r.HandleFunc("/quotes", getQuotesHandler).Methods("GET")
-	r.HandleFunc("/quotes/search", searchQuotesHandler).Methods("GET")
+	r.HandleFunc("/api/quotes", getQuotesHandler).Methods("GET")
+	r.HandleFunc("/api/quotes/search", searchQuotesHandler).Methods("GET")
 
 	http.ListenAndServe(":8080", r)
 }
